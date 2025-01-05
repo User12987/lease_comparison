@@ -1,0 +1,24 @@
+---
+import LanguagePicker from '../components/LanguagePicker.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import '../styles/global.css';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset='UTF-8' />
+		<meta
+			name='viewport'
+			content='width=device-width'
+		/>
+		<title>{t('title')}</title>
+	</head>
+	<body class='bg-gray-100'>
+		<LanguagePicker />
+		<slot />
+	</body>
+</html>

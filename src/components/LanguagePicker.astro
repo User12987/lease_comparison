@@ -1,0 +1,46 @@
+---
+// src/components/LanguagePicker.astro
+
+import { languages } from '../i18n/ui';
+import { getLangFromUrl, getRelativeLocaleUrl } from '../i18n/utils';
+
+const currentLang = getLangFromUrl(Astro.url);
+---
+
+<div class='language-picker'>
+	{
+		Object.entries(languages).map(([lang, label]) => (
+			<a
+				href={getRelativeLocaleUrl(lang as keyof typeof languages)}
+				class={`lang-link ${currentLang === lang ? 'active' : ''}`}
+			>
+				{label}
+			</a>
+		))
+	}
+</div>
+
+<style>
+	.language-picker {
+		position: fixed;
+		top: 1rem;
+		right: 1rem;
+		display: flex;
+		gap: 0.5rem;
+		background: white;
+		padding: 0.5rem;
+		border-radius: 0.5rem;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+	.lang-link {
+		padding: 0.3rem 0.6rem;
+		text-decoration: none;
+		color: #666;
+		border-radius: 0.3rem;
+	}
+	.active {
+		background: #eee;
+		color: #000;
+		font-weight: bold;
+	}
+</style>

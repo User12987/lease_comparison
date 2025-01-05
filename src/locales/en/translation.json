@@ -1,0 +1,17 @@
+{
+	"title": "Lease Contract Comparison",
+	"selectLanguage": "Select Language:",
+	"threeMonthCost": "Three-Month Contract Cost (฿):",
+	"yearlyCost": "Yearly Contract Cost (฿):",
+	"deposit": "Deposit Amount (฿):",
+	"month": "Month",
+	"yearlyContract": "Yearly Contract (฿)",
+	"shortContract": "Short-Term Contract (฿)",
+	"comparison": "Which Contract is More Beneficial",
+	"yearlyBetter": "Yearly is more beneficial by",
+	"shortBetter": "Short-Term is more beneficial by",
+	"sameCost": "Same cost",
+	"depositLost": "(Deposit Lost)",
+	"depositReturned": "(Deposit Returned)",
+	"chart": "Cost Over Time"
+}

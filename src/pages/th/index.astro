@@ -1,0 +1,11 @@
+---
+// src/pages/index.astro
+
+import React from 'react';
+import Layout from '../../layouts/Layout.astro';
+import App from '../../components/App.jsx';
+---
+
+<Layout>
+	<App client:only='react' />
+</Layout>
