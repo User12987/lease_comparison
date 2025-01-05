@@ -7,7 +7,7 @@ export default defineConfig( {
 	site: 'https://user12987.github.io',
 	base: '/lease_comparison/',
 	redirects: {
-		'/': '/en/',
+		'/': '/lease_comparison/en/',
 	},
 	i18n: {
 		defaultLocale: 'en',
